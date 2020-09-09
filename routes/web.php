@@ -20,3 +20,9 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('/users','UsersController@index')->name('users.all');
+
+Route::get('/presences','PresencesController@index')->name('presences.index');
+
+Route::get('/permissions','PermissionsController@index')->name('permissions.index');
