@@ -22,7 +22,12 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/users','UsersController@index')->name('users.all');
+Route::get('/users/json/{q?}','UsersController@allUser_json');
+Route::get('/users/pdf','UsersController@createPDF');
+Route::get('/users/export/', 'UsersController@export');
 
 Route::get('/presences','PresencesController@index')->name('presences.index');
 
 Route::get('/permissions','PermissionsController@index')->name('permissions.index');
+
+Route::get('/QR-code','QRcodeController@index')->name('QRcode.index');

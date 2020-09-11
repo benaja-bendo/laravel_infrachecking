@@ -1,5 +1,5 @@
 @extends('layouts.app')
 
 @section('content')
-    tous les utilisateurs
+    <card-user-component></card-user-component>
 @endsection
