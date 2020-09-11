@@ -14,4 +14,7 @@ class QRcodeController extends Controller
     public function index(){
         return view('QRcode.index');
     }
+    public function createdpdf(){
+        return view('QRcode.index');
+    }
 }

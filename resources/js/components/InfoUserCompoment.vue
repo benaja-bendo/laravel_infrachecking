@@ -1,11 +1,6 @@
 <template>
-    <div class="hiden">
-        <div v-if="v==1">
-            <p>
-                selectionner un utilisateur
-            </p>
-        </div>
-        <div v-else class="card">
+    <div>
+        <div class="card">
             <div class="card-header">Information sur l'utilisateur</div>
             <div class="d-flex justify-content-end mt-3">
                 <a class="btn btn-primary mr-3" href="">Exporter en Excel</a>
@@ -14,8 +9,7 @@
             <div class="card-body">
                 <div class="row">
                     <div class="col-md-4">
-                        <p><img src="https://ui-avatars.com/api/?name=John+Doe" width="90" height="90"></p>
-                        <p>{{utilisateur.id }}</p>
+                        <p><img :src="utilisateur.image" width="90" height="90"></p>
                         <p>{{utilisateur.name }}</p>
                         <p>{{ utilisateur.adresse }}</p>
                         <p>{{ utilisateur.tel }}</p>
@@ -23,7 +17,6 @@
                     </div>
                     <table-presence-component v-bind:id="id"></table-presence-component>
                 </div>
-
             </div>
         </div>
     </div>
@@ -38,8 +31,7 @@
                 adresse:"l'adresse",
                 tel:'numero de telephone',
                 email:'email',
-                id:'',
-                v:13
+                id:''
             }
         },
         props:['utilisateur']

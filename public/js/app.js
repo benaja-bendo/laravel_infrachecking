@@ -1973,13 +1973,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: 'info-user',
   data: function data() {
@@ -1988,8 +1981,7 @@ __webpack_require__.r(__webpack_exports__);
       adresse: "l'adresse",
       tel: 'numero de telephone',
       email: 'email',
-      id: '',
-      v: 13
+      id: ''
     };
   },
   props: ['utilisateur']
@@ -38413,45 +38405,45 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "hiden" }, [
-    _vm.v == 1
-      ? _c("div", [
-          _c("p", [
-            _vm._v("\n            selectionner un utilisateur\n        ")
-          ])
-        ])
-      : _c("div", { staticClass: "card" }, [
-          _c("div", { staticClass: "card-header" }, [
-            _vm._v("Information sur l'utilisateur")
-          ]),
-          _vm._v(" "),
-          _vm._m(0),
-          _vm._v(" "),
-          _c("div", { staticClass: "card-body" }, [
-            _c(
-              "div",
-              { staticClass: "row" },
-              [
-                _c("div", { staticClass: "col-md-4" }, [
-                  _vm._m(1),
-                  _vm._v(" "),
-                  _c("p", [_vm._v(_vm._s(_vm.utilisateur.id))]),
-                  _vm._v(" "),
-                  _c("p", [_vm._v(_vm._s(_vm.utilisateur.name))]),
-                  _vm._v(" "),
-                  _c("p", [_vm._v(_vm._s(_vm.utilisateur.adresse))]),
-                  _vm._v(" "),
-                  _c("p", [_vm._v(_vm._s(_vm.utilisateur.tel))]),
-                  _vm._v(" "),
-                  _c("p", [_vm._v(_vm._s(_vm.utilisateur.email))])
-                ]),
-                _vm._v(" "),
-                _c("table-presence-component", { attrs: { id: _vm.id } })
-              ],
-              1
-            )
-          ])
-        ])
+  return _c("div", [
+    _c("div", { staticClass: "card" }, [
+      _c("div", { staticClass: "card-header" }, [
+        _vm._v("Information sur l'utilisateur")
+      ]),
+      _vm._v(" "),
+      _vm._m(0),
+      _vm._v(" "),
+      _c("div", { staticClass: "card-body" }, [
+        _c(
+          "div",
+          { staticClass: "row" },
+          [
+            _c("div", { staticClass: "col-md-4" }, [
+              _c("p", [
+                _c("img", {
+                  attrs: {
+                    src: _vm.utilisateur.image,
+                    width: "90",
+                    height: "90"
+                  }
+                })
+              ]),
+              _vm._v(" "),
+              _c("p", [_vm._v(_vm._s(_vm.utilisateur.name))]),
+              _vm._v(" "),
+              _c("p", [_vm._v(_vm._s(_vm.utilisateur.adresse))]),
+              _vm._v(" "),
+              _c("p", [_vm._v(_vm._s(_vm.utilisateur.tel))]),
+              _vm._v(" "),
+              _c("p", [_vm._v(_vm._s(_vm.utilisateur.email))])
+            ]),
+            _vm._v(" "),
+            _c("table-presence-component", { attrs: { id: _vm.id } })
+          ],
+          1
+        )
+      ])
+    ])
   ])
 }
 var staticRenderFns = [
@@ -38467,20 +38459,6 @@ var staticRenderFns = [
       _c("a", { staticClass: "btn btn-primary mr-3", attrs: { href: "" } }, [
         _vm._v("Exporter en PDF")
       ])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("p", [
-      _c("img", {
-        attrs: {
-          src: "https://ui-avatars.com/api/?name=John+Doe",
-          width: "90",
-          height: "90"
-        }
-      })
     ])
   }
 ]
@@ -38633,23 +38611,23 @@ var staticRenderFns = [
             _vm._v(" "),
             _c("option", { attrs: { value: "3" } }, [_vm._v("Mars")]),
             _vm._v(" "),
-            _c("option", { attrs: { value: "3" } }, [_vm._v("Avril")]),
+            _c("option", { attrs: { value: "4" } }, [_vm._v("Avril")]),
             _vm._v(" "),
-            _c("option", { attrs: { value: "3" } }, [_vm._v("Mai")]),
+            _c("option", { attrs: { value: "5" } }, [_vm._v("Mai")]),
             _vm._v(" "),
-            _c("option", { attrs: { value: "3" } }, [_vm._v("Juin")]),
+            _c("option", { attrs: { value: "6" } }, [_vm._v("Juin")]),
             _vm._v(" "),
-            _c("option", { attrs: { value: "3" } }, [_vm._v("Juillet")]),
+            _c("option", { attrs: { value: "7" } }, [_vm._v("Juillet")]),
             _vm._v(" "),
-            _c("option", { attrs: { value: "3" } }, [_vm._v("Aout")]),
+            _c("option", { attrs: { value: "8" } }, [_vm._v("Aout")]),
             _vm._v(" "),
-            _c("option", { attrs: { value: "3" } }, [_vm._v("Septembre")]),
+            _c("option", { attrs: { value: "9" } }, [_vm._v("Septembre")]),
             _vm._v(" "),
-            _c("option", { attrs: { value: "3" } }, [_vm._v("Octobre")]),
+            _c("option", { attrs: { value: "10" } }, [_vm._v("Octobre")]),
             _vm._v(" "),
-            _c("option", { attrs: { value: "3" } }, [_vm._v("Novembre")]),
+            _c("option", { attrs: { value: "11" } }, [_vm._v("Novembre")]),
             _vm._v(" "),
-            _c("option", { attrs: { value: "3" } }, [_vm._v("Decembre")])
+            _c("option", { attrs: { value: "12" } }, [_vm._v("Decembre")])
           ]
         )
       ]),

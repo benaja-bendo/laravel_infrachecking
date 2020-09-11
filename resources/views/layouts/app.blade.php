@@ -36,9 +36,9 @@
                         <li>
                             <a href="{{ route('users.all') }}" class="nav-link">Utilisateurs</a>
                         </li>
-                        <li>
-                            <a href="{{ route('presences.index') }}" class="nav-link">présences</a>
-                        </li>
+{{--                        <li>--}}
+{{--                            <a href="{{ route('presences.index') }}" class="nav-link">présences</a>--}}
+{{--                        </li>--}}
                         <li>
                             <a href="{{ route('permissions.index') }}" class="nav-link">permissions</a>
                         </li>

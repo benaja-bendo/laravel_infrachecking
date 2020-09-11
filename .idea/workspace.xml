@@ -2,42 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="537236f3-8e3d-4519-8e29-78c0753f9a82" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/Exports/UsersExport.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/QRcodeController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/dompdf.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/excel.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/components/CardUserCompoment.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/components/InfoUserCompoment.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/components/ListeUsersCompoment.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/components/tablePresenceCompoment.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/Gestion_users/all_users.blade_copie.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/QRcode/index.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/layouts/pdf_view.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/pdf_view.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/stubs/export.model.stub" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/stubs/export.plain.stub" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/stubs/export.query-model.stub" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/stubs/export.query.stub" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/stubs/import.collection.stub" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/stubs/import.model.stub" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/infraChecking_laravel.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/infraChecking_laravel.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/css/print.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/js/print.min.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/RegisterController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/RegisterController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/UsersController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/UsersController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/app.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/QRcodeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/QRcodeController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/components/ExampleComponent.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/Gestion_users/all_users.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Gestion_users/all_users.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/auth/register.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/register.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/components/InfoUserCompoment.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/InfoUserCompoment.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/components/tablePresenceCompoment.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/tablePresenceCompoment.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/QRcode/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/QRcode/index.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/welcome.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/welcome.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -273,6 +247,7 @@
     <MESSAGE value="scaffolding avec vue js" />
     <MESSAGE value="premiere migration" />
     <MESSAGE value="mise en page des vues avec des models users, presences,permissions" />
-    <option name="LAST_COMMIT_MESSAGE" value="mise en page des vues avec des models users, presences,permissions" />
+    <MESSAGE value="recuperation des infos users dans differents compoment" />
+    <option name="LAST_COMMIT_MESSAGE" value="recuperation des infos users dans differents compoment" />
   </component>
 </project>
