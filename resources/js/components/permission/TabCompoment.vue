@@ -15,6 +15,9 @@
     export default {
         components: {
             Tabs, Tab
+        },
+        props:{
+
         }
     }
 </script>

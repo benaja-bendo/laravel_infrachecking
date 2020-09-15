@@ -2094,7 +2094,8 @@ __webpack_require__.r(__webpack_exports__);
   components: {
     Tabs: vue_slim_tabs__WEBPACK_IMPORTED_MODULE_0__["Tabs"],
     Tab: vue_slim_tabs__WEBPACK_IMPORTED_MODULE_0__["Tab"]
-  }
+  },
+  props: {}
 });
 
 /***/ }),
@@ -2121,7 +2122,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 /* harmony default export */ __webpack_exports__["default"] = ({
-  name: 'tab-content',
   data: function data() {
     return {};
   }
@@ -2149,7 +2149,9 @@ __webpack_require__.r(__webpack_exports__);
 //
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
-    return {};
+    return {
+      isVisible: false
+    };
   }
 });
 
@@ -2175,13 +2177,15 @@ __webpack_require__.r(__webpack_exports__);
 //
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
-    return {};
+    return {
+      permissions: {}
+    };
   },
   created: function created() {
     var _this = this;
 
-    axios.get('http://127.0.0.1:8000/users/json').then(function (Response) {
-      return _this.utilisateurs = Response.data;
+    axios.get('http://127.0.0.1:8000/permissions/json').then(function (Response) {
+      return _this.permissions = Response.data;
     })["catch"](function (Error) {
       return console.log(Error);
     });
@@ -6736,7 +6740,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, "\n.h_card[data-v-c9a56bee] {\n    padding: 0.5rem;\n    cursor: pointer;\n}\n", ""]);
+exports.push([module.i, "\n.h_card[data-v-c9a56bee] {\n    padding: 0.5rem;\n    cursor: pointer;\n    border-color: #1b4b72;\n}\n", ""]);
 
 // exports
 
@@ -38941,21 +38945,23 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _vm._m(0)
+  return _c("div", [
+    _vm.isVisible
+      ? _c("div", { staticClass: "h_card card" }, [
+          _vm._m(0),
+          _vm._v("\n        crennaux | Date de permission\n    ")
+        ])
+      : _vm._e()
+  ])
 }
 var staticRenderFns = [
   function() {
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", [
-      _c("div", { staticClass: "h_card card" }, [
-        _c("h5", { staticClass: "card-title" }, [
-          _vm._v("Nom du prof | "),
-          _c("span", { staticClass: "badge-info" }, [_vm._v("accepter")])
-        ]),
-        _vm._v("\n        crennaux | Date de permission\n    ")
-      ])
+    return _c("h5", { staticClass: "card-title" }, [
+      _vm._v("Nom du prof | "),
+      _c("span", { staticClass: "badge-info" }, [_vm._v("accepter")])
     ])
   }
 ]
@@ -38980,21 +38986,30 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _vm._m(0)
+  return _c(
+    "div",
+    _vm._l(_vm.permissions, function(permission) {
+      return _c(
+        "div",
+        { key: _vm.permissions.id, staticClass: "h_card card mb-3" },
+        [
+          _c("h5", { staticClass: "card-title" }, [
+            _vm._v(_vm._s(permission.name) + " " + _vm._s(permission.prenom))
+          ]),
+          _vm._v(
+            "\n        " +
+              _vm._s(permission.crennaux) +
+              " | " +
+              _vm._s(permission.date_de_pernission) +
+              "\n    "
+          )
+        ]
+      )
+    }),
+    0
+  )
 }
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", [
-      _c("div", { staticClass: "h_card card" }, [
-        _c("h5", { staticClass: "card-title" }, [_vm._v("Nom du prof")]),
-        _vm._v("\n        crennaux | Date de permission\n    ")
-      ])
-    ])
-  }
-]
+var staticRenderFns = []
 render._withStripped = true
 
 

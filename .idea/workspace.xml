@@ -2,17 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="537236f3-8e3d-4519-8e29-78c0753f9a82" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/js/components/permission/TabContentCompoment.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/components/permission/TabHistoryCompoment.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/components/permission/TabRecuCompoment.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/tb_permission.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/sass/style_permission.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/PermissionsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/PermissionsController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_09_14_104427_create_tb_permissions.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_09_14_104427_create_tb_permissions.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/app.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/style_permission.css" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/components/TabCompoment.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/permission/TabCompoment.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/components/permission/tablePresenceCompoment.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/tablePresenceCompoment.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/Gestion_permissions/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Gestion_permissions/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/components/permission/TabCompoment.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/permission/TabCompoment.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/components/permission/TabContentCompoment.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/permission/TabContentCompoment.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/components/permission/TabHistoryCompoment.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/permission/TabHistoryCompoment.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/components/permission/TabRecuCompoment.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/permission/TabRecuCompoment.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/sass/app.scss" beforeDir="false" afterPath="$PROJECT_DIR$/resources/sass/app.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -207,7 +210,8 @@
       <workItem from="1599867790867" duration="2489000" />
       <workItem from="1600009041093" duration="1608000" />
       <workItem from="1600070619198" duration="13506000" />
-      <workItem from="1600156475249" duration="8731000" />
+      <workItem from="1600156475249" duration="13452000" />
+      <workItem from="1600176355979" duration="3166000" />
     </task>
     <task id="LOCAL-00001" summary="scaffolding avec vue js">
       <created>1599565191497</created>

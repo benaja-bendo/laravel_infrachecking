@@ -1,6 +1,6 @@
 <template>
     <div>
-        <div class="h_card card">
+        <div class="h_card card" v-if="isVisible">
             <h5 class="card-title">Nom du prof | <span class="badge-info">accepter</span></h5>
             crennaux | Date de permission
         </div>
@@ -10,7 +10,9 @@
 <script>
     export default {
         data() {
-            return {}
+            return {
+                isVisible:false,
+            }
         }
     }
 </script>

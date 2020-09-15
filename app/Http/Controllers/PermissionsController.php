@@ -2,8 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use App\User;
+use App\tb_permission;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class PermissionsController extends Controller
 {
@@ -12,20 +13,18 @@ class PermissionsController extends Controller
         $this->middleware('auth');
     }
 
-    public function index(){
+    public function index()
+    {
         return view('Gestion_permissions.index');
     }
 
-    public  function  allUser_json()
+    public function all()
     {
-        if(request('q') !== null){
-            $utilisateurs['data'] = User::where('name','like', '%'.request('q').'%')->get();
-//            $utilisateurs['data'] = DB::table('users')->where('name','like', '%'.'bendo'.'%')->get();
-            return Response()->json($utilisateurs['data']);
-        }
-        else{
-            $utilisateurs = User::all();
-            return Response()->json($utilisateurs);
-        }
+//        $permissions = tb_permission::all()->leftJoin('users','tb_permission.user_id','=','users.id');
+        $permissions = DB::table('tb_permissions')
+            ->leftJoin('users', 'tb_permissions.user_id', '=', 'users.id')
+            ->get();
+        return Response()->json($permissions);
+
     }
 }
