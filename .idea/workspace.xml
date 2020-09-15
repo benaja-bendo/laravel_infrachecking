@@ -2,17 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="537236f3-8e3d-4519-8e29-78c0753f9a82" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/js/components/permission/TabContentCompoment.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/components/permission/TabHistoryCompoment.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/components/permission/TabRecuCompoment.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/PermissionsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/PermissionsController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/components/TabCompoment.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/permission/TabCompoment.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/components/permission/tablePresenceCompoment.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/tablePresenceCompoment.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/Gestion_permissions/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Gestion_permissions/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -157,18 +148,19 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="Z:/infraChecking" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\benji\Videos\work_infraone\projects\infraChecking_laravel\resources\views\Gestion_users" />
-      <recent name="C:\Users\benji\Videos\work_infraone\projects\infraChecking_laravel\resources\views" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\benji\Videos\work_infraone\projects\infraChecking_laravel\resources\js\components\permission" />
       <recent name="C:\Users\benji\Videos\work_infraone\projects\infraChecking_laravel\resources\js\components" />
       <recent name="C:\Users\benji\Videos\work_infraone\projects\infraChecking_laravel\resources\views\layouts" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Styve\PhpstormProjects\laravel_infrachecking" />
+      <recent name="C:\Users\benji\Videos\work_infraone\projects\infraChecking_laravel\resources\views\Gestion_users" />
+      <recent name="C:\Users\benji\Videos\work_infraone\projects\infraChecking_laravel\resources\views" />
     </key>
   </component>
   <component name="RunDashboard">
