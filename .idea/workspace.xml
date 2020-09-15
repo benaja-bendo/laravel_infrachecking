@@ -2,35 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="537236f3-8e3d-4519-8e29-78c0753f9a82" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/tb_permission.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/sass/style_permission.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/PermissionsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/PermissionsController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_09_14_104427_create_tb_permissions.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_09_14_104427_create_tb_permissions.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/app.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/style_permission.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/components/permission/TabCompoment.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/permission/TabCompoment.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/components/permission/TabContentCompoment.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/permission/TabContentCompoment.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/components/permission/TabHistoryCompoment.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/permission/TabHistoryCompoment.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/components/permission/TabRecuCompoment.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/permission/TabRecuCompoment.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/sass/app.scss" beforeDir="false" afterPath="$PROJECT_DIR$/resources/sass/app.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
     </list>
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
-    <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
+  <component name="ComposerSettings">
     <execution>
       <executable />
     </execution>
-  </component>
-  <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="PhpWorkspaceProjectConfiguration">
     <include_path>
@@ -155,25 +139,7 @@
       <path value="$PROJECT_DIR$/vendor/maennchen/zipstream-php" />
     </include_path>
   </component>
-  <component name="ProjectId" id="1hE01zdaHsEe7h1TyP8paXcZIng" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
-  <component name="PropertiesComponent">
-    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="Z:/infraChecking" />
-    <property name="nodejs_package_manager_path" value="npm" />
-  </component>
-  <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\benji\Videos\work_infraone\projects\infraChecking_laravel\resources\views\Gestion_users" />
-      <recent name="C:\Users\benji\Videos\work_infraone\projects\infraChecking_laravel\resources\views" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\benji\Videos\work_infraone\projects\infraChecking_laravel\resources\js\components\permission" />
-      <recent name="C:\Users\benji\Videos\work_infraone\projects\infraChecking_laravel\resources\js\components" />
-      <recent name="C:\Users\benji\Videos\work_infraone\projects\infraChecking_laravel\resources\views\layouts" />
-    </key>
-  </component>
   <component name="RunDashboard">
     <option name="ruleStates">
       <list>
@@ -186,93 +152,10 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
-    <configuration name="phpunit.xml" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
-      <TestRunner scope="XML" />
-      <method v="2" />
-    </configuration>
-  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
   <component name="TaskManager">
-    <task active="true" id="Default" summary="Default task">
-      <changelist id="537236f3-8e3d-4519-8e29-78c0753f9a82" name="Default Changelist" comment="" />
-      <created>1599560732688</created>
-      <option name="number" value="Default" />
-      <option name="presentableId" value="Default" />
-      <updated>1599560732688</updated>
-      <workItem from="1599560735504" duration="9054000" />
-      <workItem from="1599639077887" duration="21254000" />
-      <workItem from="1599666667119" duration="730000" />
-      <workItem from="1599726439146" duration="26386000" />
-      <workItem from="1599811142752" duration="10695000" />
-      <workItem from="1599867790867" duration="2489000" />
-      <workItem from="1600009041093" duration="1608000" />
-      <workItem from="1600070619198" duration="13506000" />
-      <workItem from="1600156475249" duration="13452000" />
-      <workItem from="1600176355979" duration="3166000" />
-    </task>
-    <task id="LOCAL-00001" summary="scaffolding avec vue js">
-      <created>1599565191497</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1599565191497</updated>
-    </task>
-    <task id="LOCAL-00002" summary="premiere migration">
-      <created>1599581157525</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1599581157526</updated>
-    </task>
-    <task id="LOCAL-00003" summary="mise en page des vues avec des models users, presences,permissions">
-      <created>1599646101929</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1599646101929</updated>
-    </task>
-    <task id="LOCAL-00004" summary="recuperation des infos users dans differents compoment">
-      <created>1599838255055</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1599838255055</updated>
-    </task>
-    <task id="LOCAL-00005" summary="depuis du travail dans le partie permission">
-      <created>1600159056677</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1600159056678</updated>
-    </task>
-    <option name="localTasksCounter" value="6" />
     <servers />
-  </component>
-  <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
-  </component>
-  <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State>
-              <option name="COLUMN_ORDER" />
-            </State>
-          </value>
-        </entry>
-      </map>
-    </option>
-  </component>
-  <component name="VcsManagerConfiguration">
-    <MESSAGE value="scaffolding avec vue js" />
-    <MESSAGE value="premiere migration" />
-    <MESSAGE value="mise en page des vues avec des models users, presences,permissions" />
-    <MESSAGE value="recuperation des infos users dans differents compoment" />
-    <MESSAGE value="depuis du travail dans le partie permission" />
-    <option name="LAST_COMMIT_MESSAGE" value="depuis du travail dans le partie permission" />
   </component>
 </project>
