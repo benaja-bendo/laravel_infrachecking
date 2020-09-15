@@ -30,6 +30,7 @@ Route::get('/presences','PresencesController@index')->name('presences.index');
 Route::get('/presences/json/{id?}','PresencesController@all');
 
 Route::get('/permissions','PermissionsController@index')->name('permissions.index');
+Route::get('/permissions/json/{id?}','PermissionsController@all');
 
 Route::get('/QR-code','QRcodeController@index')->name('QRcode.index');
 Route::get('/QR-code/pdf','QRcodeController@createdpdf')->name('QRcode.index');

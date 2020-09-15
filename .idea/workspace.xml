@@ -2,22 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="537236f3-8e3d-4519-8e29-78c0753f9a82" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/database/migrations/2020_09_14_104427_create_tb_permissions.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/css/style_permission.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/components/TabCompoment.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/js/components/permission/TabContentCompoment.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/js/components/permission/TabHistoryCompoment.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/js/components/permission/TabRecuCompoment.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/PresencesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/PresencesController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/PermissionsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/PermissionsController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/components/InfoUserCompoment.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/InfoUserCompoment.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/components/ListeUsersCompoment.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/ListeUsersCompoment.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/components/tablePresenceCompoment.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/tablePresenceCompoment.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/components/TabCompoment.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/permission/TabCompoment.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/components/permission/tablePresenceCompoment.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/tablePresenceCompoment.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/Gestion_permissions/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Gestion_permissions/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/QRcode/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/QRcode/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/auth/register.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/register.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -167,12 +161,14 @@
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\benji\Videos\work_infraone\projects\infraChecking_laravel\resources\views\layouts" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\benji\Videos\work_infraone\projects\infraChecking_laravel\resources\views\Gestion_users" />
       <recent name="C:\Users\benji\Videos\work_infraone\projects\infraChecking_laravel\resources\views" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\benji\Videos\work_infraone\projects\infraChecking_laravel\resources\js\components\permission" />
+      <recent name="C:\Users\benji\Videos\work_infraone\projects\infraChecking_laravel\resources\js\components" />
+      <recent name="C:\Users\benji\Videos\work_infraone\projects\infraChecking_laravel\resources\views\layouts" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -211,7 +207,7 @@
       <workItem from="1599867790867" duration="2489000" />
       <workItem from="1600009041093" duration="1608000" />
       <workItem from="1600070619198" duration="13506000" />
-      <workItem from="1600156475249" duration="1489000" />
+      <workItem from="1600156475249" duration="8731000" />
     </task>
     <task id="LOCAL-00001" summary="scaffolding avec vue js">
       <created>1599565191497</created>
@@ -241,7 +237,14 @@
       <option name="project" value="LOCAL" />
       <updated>1599838255055</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="depuis du travail dans le partie permission">
+      <created>1600159056677</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1600159056678</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -265,6 +268,7 @@
     <MESSAGE value="premiere migration" />
     <MESSAGE value="mise en page des vues avec des models users, presences,permissions" />
     <MESSAGE value="recuperation des infos users dans differents compoment" />
-    <option name="LAST_COMMIT_MESSAGE" value="recuperation des infos users dans differents compoment" />
+    <MESSAGE value="depuis du travail dans le partie permission" />
+    <option name="LAST_COMMIT_MESSAGE" value="depuis du travail dans le partie permission" />
   </component>
 </project>

@@ -1,10 +1,10 @@
 <template>
     <tabs>
         <tab title="Reçu">
-            Liste des permissions reçu
+            <tabRecu-component></tabRecu-component>
         </tab>
         <tab title="Historique">
-            Liste des historiques
+            <tabHistory-component></tabHistory-component>
         </tab>
     </tabs>
 </template>

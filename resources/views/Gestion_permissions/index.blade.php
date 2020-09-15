@@ -13,15 +13,7 @@
 
             <div class="content">
                 <div class="content_item">
-                    <div class="card">
-                        <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                            <a href="#" class="card-link">Date</a>
-                            <a href="#" class="card-link">heure</a>
-                        </div>
-                    </div>
+                    <tabcontent-component></tabcontent-component>
                 </div>
                 <div class="content_footer">
                     <h4>traitement de la permission</h4>
