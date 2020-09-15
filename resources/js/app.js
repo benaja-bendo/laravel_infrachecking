@@ -22,7 +22,8 @@ window.Vue = require('vue');
 Vue.component('card-user-component', require('./components/CardUserCompoment').default);
 Vue.component('info-user-component', require('./components/InfoUserCompoment.vue').default);
 Vue.component('liste-user-component', require('./components/ListeUsersCompoment').default);
-Vue.component('table-presence-component', require('./components/tablePresenceCompoment').default);
+Vue.component('table-presence-component', require('./components/permission/tablePresenceCompoment').default);
+Vue.component('tab-component', require('./components/TabCompoment').default);
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to

@@ -27,6 +27,7 @@ Route::get('/users/pdf','UsersController@createPDF');
 Route::get('/users/export/', 'UsersController@export');
 
 Route::get('/presences','PresencesController@index')->name('presences.index');
+Route::get('/presences/json/{id?}','PresencesController@all');
 
 Route::get('/permissions','PermissionsController@index')->name('permissions.index');
 

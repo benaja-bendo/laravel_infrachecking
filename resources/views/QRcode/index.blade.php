@@ -2,14 +2,10 @@
 
 @section('content')
 
-    <div class="container" id="qrcode">
-        <h2>QRcode <small>(ctrl+p) pour imprimer</small></h2>
-        <div class="text-center">
+    <div class="container text-center" id="qrcode">
+        <a href="{{ route('users.all') }}">(ctrl+p) pour imprimer</a>
+        <div class="text-center mt-5">
             {!! QrCode::size(500)->color(116, 175 ,226)->generate('Make me a QrCode!'); !!}
-            <p>QRCode de l'application</p>
-            <button type="button" onclick="printJS('docs/printjs.pdf')">
-                Print PDF
-            </button>
         </div>
     </div>
 

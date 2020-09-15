@@ -35,19 +35,19 @@
             }
         },
         created() {
-            axios.get('http://192.168.100.42:80/users/json')
+            axios.get('http://127.0.0.1:8000/users/json')
                 .then(Response => this.utilisateurs = Response.data)
                 .catch(Error => console.log(Error))
         },
         methods:{
             searchUsers(){
                 if (this.q.length > 0){
-                    axios.get('http://192.168.100.42:80/users/json/' + this.q)
+                    axios.get('http://127.0.0.1:8000/users/json/' + this.q)
                         .then(Response => this.utilisateurs = Response.data)
                         .catch(Error => console.log(Error))
 
                 }else{
-                    axios.get('http://192.168.100.42:80/users/json/')
+                    axios.get('http://127.0.0.1:8000/users/json/')
                         .then(Response => this.utilisateurs = Response.data)
                         .catch(Error => console.log(Error))
                 }

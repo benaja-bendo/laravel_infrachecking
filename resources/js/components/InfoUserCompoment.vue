@@ -14,8 +14,9 @@
                         <p>{{ utilisateur.adresse }}</p>
                         <p>{{ utilisateur.tel }}</p>
                         <p>{{ utilisateur.email }}</p>
+                        <p v-bind="id_user"></p>
                     </div>
-                    <table-presence-component v-bind:id="id"></table-presence-component>
+                    <table-presence-component v-bind:id="id_user"></table-presence-component>
                 </div>
             </div>
         </div>
@@ -27,14 +28,15 @@
         name:'info-user',
         data(){
             return{
-                nom:'le nom',
-                adresse:"l'adresse",
-                tel:'numero de telephone',
-                email:'email',
-                id:''
+                id_user:'67'
             }
         },
-        props:['utilisateur']
+        props:['utilisateur'],
+        methods:{
+            recupere(){
+
+            }
+        }
     }
 </script>
 <style scope>
