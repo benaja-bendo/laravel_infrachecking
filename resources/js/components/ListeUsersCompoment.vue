@@ -17,7 +17,7 @@
             <tr v-for="utilisateur in utilisateurs" :key="utilisateur.id">
                 <th scope="row">{{ utilisateur.name }}</th>
                 <td>{{ utilisateur.tel }}</td>
-                <td>
+                <td >
                     <button @click="envoie(utilisateur)" class="btn-info">voir</button>
                 </td>
             </tr>

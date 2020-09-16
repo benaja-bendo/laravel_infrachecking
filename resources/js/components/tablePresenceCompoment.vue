@@ -47,18 +47,11 @@
     export default {
         data() {
             return {
-                utilisateurs: ''
+
             }
         },
         methods: {
-            recuperer() {
-                axios.get('http://127.0.0.1:8000/users/json/')
-                    .then(Response => this.utilisateurs = Response.data)
-                    .catch(Error => console.log(Error))
-
-            },
         },
-        props: ['id']
     }
 </script>
 

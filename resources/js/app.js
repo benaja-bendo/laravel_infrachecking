@@ -8,6 +8,7 @@ require('./bootstrap');
 
 window.Vue = require('vue');
 
+
 /**
  * The following block of code may be used to automatically register your
  * Vue components. It will recursively scan this directory for the Vue
@@ -23,6 +24,7 @@ Vue.component('card-user-component', require('./components/CardUserCompoment').d
 Vue.component('info-user-component', require('./components/InfoUserCompoment.vue').default);
 Vue.component('liste-user-component', require('./components/ListeUsersCompoment').default);
 Vue.component('table-presence-component', require('./components/tablePresenceCompoment').default);
+Vue.component('permission-component', require('./components/permission/PermissionCompoment').default);
 Vue.component('tab-component', require('./components/permission/TabCompoment').default);
 Vue.component('tabRecu-component', require('./components/permission/TabRecuCompoment.vue').default);
 Vue.component('tabHistory-component', require('./components/permission/TabHistoryCompoment').default);
@@ -37,3 +39,4 @@ Vue.component('tabcontent-component', require('./components/permission/TabConten
 const app = new Vue({
     el: '#app',
 });
+// export const bus = new Vue();
