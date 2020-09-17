@@ -21,6 +21,7 @@ class CreateUsersTable extends Migration
             $table->string('image');
             $table->string('tel');
             $table->string('adresse');
+            $table->string('role',255)->default("inconnue");
             $table->string('isactif')->default('oui');
             $table->string('immei')->nullable();
             $table->timestamp('email_verified_at')->nullable();
