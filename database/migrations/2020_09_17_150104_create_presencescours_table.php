@@ -13,7 +13,7 @@ class CreatePresencescoursTable extends Migration
      */
     public function up()
     {
-        Schema::create('tb_presence_cous', function (Blueprint $table) {
+        Schema::create('tb_presence_cours', function (Blueprint $table) {
             $table->id();
             $table->date('debut_cours');
             $table->date('fin_cours');
