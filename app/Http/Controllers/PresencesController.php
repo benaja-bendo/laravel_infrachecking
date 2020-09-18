@@ -20,4 +20,5 @@ class PresencesController extends Controller
         $allPresence = tb_presence::all();
         return Response()->json($allPresence);
     }
+
 }

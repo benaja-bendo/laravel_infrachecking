@@ -14,9 +14,8 @@
                         <p>{{ utilisateur.adresse }}</p>
                         <p>{{ utilisateur.tel }}</p>
                         <p>{{ utilisateur.email }}</p>
-                        <p v-bind="id_user"></p>
                     </div>
-                    <table-presence-component v-bind:id="id_user"></table-presence-component>
+                    <table-presence-component></table-presence-component>
                 </div>
             </div>
         </div>
@@ -28,15 +27,10 @@
         name:'info-user',
         data(){
             return{
-                id_user:'67'
-            }
-        },
-        props:['utilisateur'],
-        methods:{
-            recupere(){
 
             }
-        }
+        },
+        props:['utilisateur']
     }
 </script>
 <style scope>

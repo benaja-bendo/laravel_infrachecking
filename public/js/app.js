@@ -1973,18 +1973,12 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: 'info-user',
   data: function data() {
-    return {
-      id_user: '67'
-    };
+    return {};
   },
-  props: ['utilisateur'],
-  methods: {
-    recupere: function recupere() {}
-  }
+  props: ['utilisateur']
 });
 
 /***/ }),
@@ -2068,6 +2062,57 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/permission/PermissionCompoment.vue?vue&type=script&lang=js&":
+/*!*****************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/permission/PermissionCompoment.vue?vue&type=script&lang=js& ***!
+  \*****************************************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+/* harmony default export */ __webpack_exports__["default"] = ({
+  data: function data() {
+    return {
+      permission: {}
+    };
+  },
+  methods: {}
+});
+
+/***/ }),
+
 /***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/permission/TabCompoment.vue?vue&type=script&lang=js&":
 /*!**********************************************************************************************************************************************************************************!*\
   !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/permission/TabCompoment.vue?vue&type=script&lang=js& ***!
@@ -2094,7 +2139,8 @@ __webpack_require__.r(__webpack_exports__);
   components: {
     Tabs: vue_slim_tabs__WEBPACK_IMPORTED_MODULE_0__["Tabs"],
     Tab: vue_slim_tabs__WEBPACK_IMPORTED_MODULE_0__["Tab"]
-  }
+  },
+  props: {}
 });
 
 /***/ }),
@@ -2108,6 +2154,8 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _app__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../app */ "./resources/js/app.js");
+/* harmony import */ var _app__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_app__WEBPACK_IMPORTED_MODULE_0__);
 //
 //
 //
@@ -2120,11 +2168,16 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+
 /* harmony default export */ __webpack_exports__["default"] = ({
-  name: 'tab-content',
   data: function data() {
-    return {};
-  }
+    return {
+      isVisible: true
+    };
+  },
+  props: ['permission'],
+  methods: {}
 });
 
 /***/ }),
@@ -2147,9 +2200,23 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
-    return {};
+    return {
+      permissions: {}
+    };
+  },
+  methods: {},
+  created: function created() {
+    var _this = this;
+
+    axios.get('http://127.0.0.1:8000/permissions/jsonH/').then(function (Response) {
+      return _this.permissions = Response.data;
+    })["catch"](function (Error) {
+      return console.log(Error);
+    });
   }
 });
 
@@ -2173,18 +2240,27 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
-    return {};
+    return {
+      permissions: {}
+    };
   },
   created: function created() {
     var _this = this;
 
-    axios.get('http://127.0.0.1:8000/users/json').then(function (Response) {
-      return _this.utilisateurs = Response.data;
+    axios.get('http://127.0.0.1:8000/permissions/json').then(function (Response) {
+      return _this.permissions = Response.data;
     })["catch"](function (Error) {
       return console.log(Error);
     });
+  },
+  methods: {
+    envoyer: function envoyer(permission) {
+      this.$emit('envoyerData', permission);
+      console.log("j'envoie");
+    }
   }
 });
 
@@ -2246,22 +2322,9 @@ __webpack_require__.r(__webpack_exports__);
 //
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
-    return {
-      utilisateurs: ''
-    };
+    return {};
   },
-  methods: {
-    recuperer: function recuperer() {
-      var _this = this;
-
-      axios.get('http://127.0.0.1:8000/users/json/').then(function (Response) {
-        return _this.utilisateurs = Response.data;
-      })["catch"](function (Error) {
-        return console.log(Error);
-      });
-    }
-  },
-  props: ['id']
+  methods: {}
 });
 
 /***/ }),
@@ -6736,7 +6799,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, "\n.h_card[data-v-c9a56bee] {\n    padding: 0.5rem;\n    cursor: pointer;\n}\n", ""]);
+exports.push([module.i, "\n.h_card[data-v-c9a56bee] {\n    padding: 0.5rem;\n    cursor: pointer;\n    border-color: #1b4b72;\n}\n", ""]);
 
 // exports
 
@@ -38714,12 +38777,10 @@ var render = function() {
               _vm._v(" "),
               _c("p", [_vm._v(_vm._s(_vm.utilisateur.tel))]),
               _vm._v(" "),
-              _c("p", [_vm._v(_vm._s(_vm.utilisateur.email))]),
-              _vm._v(" "),
-              _c("p", _vm._b({}, "p", _vm.id_user, false))
+              _c("p", [_vm._v(_vm._s(_vm.utilisateur.email))])
             ]),
             _vm._v(" "),
-            _c("table-presence-component", { attrs: { id: _vm.id_user } })
+            _c("table-presence-component")
           ],
           1
         )
@@ -38845,6 +38906,75 @@ render._withStripped = true
 
 /***/ }),
 
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/permission/PermissionCompoment.vue?vue&type=template&id=1f2b40ba&":
+/*!*********************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/permission/PermissionCompoment.vue?vue&type=template&id=1f2b40ba& ***!
+  \*********************************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("div", { staticClass: "container" }, [
+    _c("div", { staticClass: "permission" }, [
+      _c("div", { staticClass: "navigation" }, [
+        _c("div", { staticClass: "nav_onglet" }),
+        _vm._v(" "),
+        _c("div", { staticClass: "nav_content" }, [_c("tab-component")], 1)
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "content" }, [
+        _c(
+          "div",
+          { staticClass: "content_item" },
+          [_c("tabcontent-component")],
+          1
+        ),
+        _vm._v(" "),
+        _vm._m(0)
+      ])
+    ])
+  ])
+}
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "content_footer" }, [
+      _c("h4", [_vm._v("traitement de la permission")]),
+      _vm._v(" "),
+      _c("div", { staticClass: "form-group" }, [
+        _c("label", { attrs: { for: "message" } }, [
+          _vm._v("Méssage(facultatif)")
+        ]),
+        _vm._v(" "),
+        _c("textarea", {
+          staticClass: "form-control",
+          attrs: { id: "message" }
+        })
+      ]),
+      _vm._v(" "),
+      _c("div", [
+        _c("button", { staticClass: "btn btn-primary" }, [_vm._v("accepter")]),
+        _vm._v(" "),
+        _c("button", { staticClass: "btn btn-danger" }, [_vm._v("refuser")])
+      ])
+    ])
+  }
+]
+render._withStripped = true
+
+
+
+/***/ }),
+
 /***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/permission/TabCompoment.vue?vue&type=template&id=a00fd824&":
 /*!**************************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/permission/TabCompoment.vue?vue&type=template&id=a00fd824& ***!
@@ -38897,26 +39027,25 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _vm._m(0)
+  return _c("div", [
+    _vm.isVisible ? _c("div", { staticClass: "card" }, [_vm._m(0)]) : _vm._e()
+  ])
 }
 var staticRenderFns = [
   function() {
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", [
-      _c("div", { staticClass: "card" }, [
-        _c("div", { staticClass: "card-body" }, [
-          _c("h5", { staticClass: "card-title" }, [_vm._v("Nom du prof")]),
-          _vm._v(" "),
-          _c("p", { staticClass: "card-text" }, [
-            _vm._v(
-              "Some quick example text to build on the card title and make up the bulk of the card's content."
-            )
-          ]),
-          _vm._v("\n            crennaux | Date de permission\n        ")
-        ])
-      ])
+    return _c("div", { staticClass: "card-body" }, [
+      _c("h5", { staticClass: "card-title" }, [_vm._v("Nom du prof")]),
+      _vm._v(" "),
+      _c("p", { staticClass: "card-text" }, [
+        _vm._v(
+          "Some quick example text to build on the card title and make up the bulk of the\n                card's content."
+        )
+      ]),
+      _vm._v(" "),
+      _c("p", [_vm._v("crennaux | Date de permission")])
     ])
   }
 ]
@@ -38941,24 +39070,39 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _vm._m(0)
+  return _c(
+    "div",
+    _vm._l(_vm.permissions, function(permission) {
+      return _c(
+        "div",
+        { key: _vm.permissions.id, staticClass: "h_card card mb-3" },
+        [
+          _c("h5", { staticClass: "card-title" }, [
+            _vm._v(
+              _vm._s(permission.name) +
+                " " +
+                _vm._s(permission.prenom) +
+                " |\n            "
+            ),
+            _c("span", { staticClass: "badge-info" }, [
+              _vm._v(_vm._s(permission.reponse_de_permission))
+            ])
+          ]),
+          _vm._v(
+            "\n        " +
+              _vm._s(permission.crennaux) +
+              "/" +
+              _vm._s(permission.date_de_pernission) +
+              "\n        "
+          ),
+          _c("p", [_vm._v(_vm._s(permission.commentaire))])
+        ]
+      )
+    }),
+    0
+  )
 }
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", [
-      _c("div", { staticClass: "h_card card" }, [
-        _c("h5", { staticClass: "card-title" }, [
-          _vm._v("Nom du prof | "),
-          _c("span", { staticClass: "badge-info" }, [_vm._v("accepter")])
-        ]),
-        _vm._v("\n        crennaux | Date de permission\n    ")
-      ])
-    ])
-  }
-]
+var staticRenderFns = []
 render._withStripped = true
 
 
@@ -38980,21 +39124,42 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _vm._m(0)
+  return _c(
+    "div",
+    _vm._l(_vm.permissions, function(permission) {
+      return _c(
+        "div",
+        { key: _vm.permissions.id, staticClass: "h_card card mb-3" },
+        [
+          _c("h5", { staticClass: "card-title" }, [
+            _vm._v(_vm._s(permission.name) + " " + _vm._s(permission.prenom))
+          ]),
+          _vm._v(
+            "\n        " +
+              _vm._s(permission.crennaux) +
+              " | " +
+              _vm._s(permission.date_de_pernission) +
+              "\n        "
+          ),
+          _c(
+            "button",
+            {
+              staticClass: "btn-info",
+              on: {
+                click: function($event) {
+                  return _vm.envoyer(permission)
+                }
+              }
+            },
+            [_vm._v("voir")]
+          )
+        ]
+      )
+    }),
+    0
+  )
 }
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", [
-      _c("div", { staticClass: "h_card card" }, [
-        _c("h5", { staticClass: "card-title" }, [_vm._v("Nom du prof")]),
-        _vm._v("\n        crennaux | Date de permission\n    ")
-      ])
-    ])
-  }
-]
+var staticRenderFns = []
 render._withStripped = true
 
 
@@ -51420,6 +51585,7 @@ Vue.component('card-user-component', __webpack_require__(/*! ./components/CardUs
 Vue.component('info-user-component', __webpack_require__(/*! ./components/InfoUserCompoment.vue */ "./resources/js/components/InfoUserCompoment.vue")["default"]);
 Vue.component('liste-user-component', __webpack_require__(/*! ./components/ListeUsersCompoment */ "./resources/js/components/ListeUsersCompoment.vue")["default"]);
 Vue.component('table-presence-component', __webpack_require__(/*! ./components/tablePresenceCompoment */ "./resources/js/components/tablePresenceCompoment.vue")["default"]);
+Vue.component('permission-component', __webpack_require__(/*! ./components/permission/PermissionCompoment */ "./resources/js/components/permission/PermissionCompoment.vue")["default"]);
 Vue.component('tab-component', __webpack_require__(/*! ./components/permission/TabCompoment */ "./resources/js/components/permission/TabCompoment.vue")["default"]);
 Vue.component('tabRecu-component', __webpack_require__(/*! ./components/permission/TabRecuCompoment.vue */ "./resources/js/components/permission/TabRecuCompoment.vue")["default"]);
 Vue.component('tabHistory-component', __webpack_require__(/*! ./components/permission/TabHistoryCompoment */ "./resources/js/components/permission/TabHistoryCompoment.vue")["default"]);
@@ -51432,7 +51598,7 @@ Vue.component('tabcontent-component', __webpack_require__(/*! ./components/permi
 
 var app = new Vue({
   el: '#app'
-});
+}); // export const bus = new Vue();
 
 /***/ }),
 
@@ -51701,6 +51867,75 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_ListeUsersCompoment_vue_vue_type_template_id_8cedbb7c___WEBPACK_IMPORTED_MODULE_0__["render"]; });
 
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_ListeUsersCompoment_vue_vue_type_template_id_8cedbb7c___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
+/***/ "./resources/js/components/permission/PermissionCompoment.vue":
+/*!********************************************************************!*\
+  !*** ./resources/js/components/permission/PermissionCompoment.vue ***!
+  \********************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _PermissionCompoment_vue_vue_type_template_id_1f2b40ba___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./PermissionCompoment.vue?vue&type=template&id=1f2b40ba& */ "./resources/js/components/permission/PermissionCompoment.vue?vue&type=template&id=1f2b40ba&");
+/* harmony import */ var _PermissionCompoment_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./PermissionCompoment.vue?vue&type=script&lang=js& */ "./resources/js/components/permission/PermissionCompoment.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _PermissionCompoment_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _PermissionCompoment_vue_vue_type_template_id_1f2b40ba___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _PermissionCompoment_vue_vue_type_template_id_1f2b40ba___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/components/permission/PermissionCompoment.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/components/permission/PermissionCompoment.vue?vue&type=script&lang=js&":
+/*!*********************************************************************************************!*\
+  !*** ./resources/js/components/permission/PermissionCompoment.vue?vue&type=script&lang=js& ***!
+  \*********************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_PermissionCompoment_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/babel-loader/lib??ref--4-0!../../../../node_modules/vue-loader/lib??vue-loader-options!./PermissionCompoment.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/permission/PermissionCompoment.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_PermissionCompoment_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/components/permission/PermissionCompoment.vue?vue&type=template&id=1f2b40ba&":
+/*!***************************************************************************************************!*\
+  !*** ./resources/js/components/permission/PermissionCompoment.vue?vue&type=template&id=1f2b40ba& ***!
+  \***************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_PermissionCompoment_vue_vue_type_template_id_1f2b40ba___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../node_modules/vue-loader/lib??vue-loader-options!./PermissionCompoment.vue?vue&type=template&id=1f2b40ba& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/permission/PermissionCompoment.vue?vue&type=template&id=1f2b40ba&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_PermissionCompoment_vue_vue_type_template_id_1f2b40ba___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_PermissionCompoment_vue_vue_type_template_id_1f2b40ba___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
 
 
 

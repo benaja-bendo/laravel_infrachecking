@@ -15,13 +15,16 @@ class CreateTbPermissions extends Migration
     {
         Schema::create('tb_permissions', function (Blueprint $table) {
             $table->id();
-            $table->integer('user_id');
+//            $table->integer('user_id');
             $table->string('motif');
             $table->string('crennaux')->nullable();
             $table->date('date_de_pernission')->nullable();
             $table->string('reponse_de_permission')->nullable();
             $table->string('commentaire')->nullable();
+            $table->unsignedBigInteger('user_id')->index();
             $table->timestamps();
+
+            $table->foreign('user_id')->references('id')->on('users');
         });
     }
 
