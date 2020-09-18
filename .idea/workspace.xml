@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
+<<<<<<< HEAD
     <list default="true" id="537236f3-8e3d-4519-8e29-78c0753f9a82" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
@@ -8,6 +9,9 @@
       <change beforePath="$PROJECT_DIR$/resources/js/components/permission/TabCompoment.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/permission/TabCompoment.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/js/components/permission/TabContentCompoment.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/permission/TabContentCompoment.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/js/components/permission/TabRecuCompoment.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/permission/TabRecuCompoment.vue" afterDir="false" />
+=======
+
+>>>>>>> 993875fbc3d7126d181f1662374d6b98d43beaf8
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -151,8 +155,7 @@
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="C:/xampp/htdocs/mes-sites/bgrfacile_laravel" />
-    <property name="nodejs_package_manager_path" value="yarn" />
+
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -175,12 +178,16 @@
       <created>1600188223538</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
+<<<<<<< HEAD
       <updated>1600188223538</updated>
       <workItem from="1600188225512" duration="884000" />
       <workItem from="1600242227052" duration="24445000" />
       <workItem from="1600339301534" duration="8654000" />
       <workItem from="1600373844816" duration="772000" />
       <workItem from="1600413974896" duration="177000" />
+=======
+
+>>>>>>> 993875fbc3d7126d181f1662374d6b98d43beaf8
     </task>
     <task id="LOCAL-00001" summary="Merge branch 'master' of https://github.com/benaja-bendo/laravel_infrachecking&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml">
       <created>1600269060488</created>

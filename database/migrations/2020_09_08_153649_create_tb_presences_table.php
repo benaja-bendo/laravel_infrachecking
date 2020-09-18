@@ -19,6 +19,7 @@ class CreateTbPresencesTable extends Migration
             $table->date('heure_depart');
             $table->date('debut_pause');
             $table->date('fin_pause');
+            $table->foreignId("user_id")->constrained();
             $table->timestamps();
         });
     }
