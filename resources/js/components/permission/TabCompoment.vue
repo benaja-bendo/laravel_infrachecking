@@ -1,7 +1,7 @@
 <template>
     <tabs>
         <tab title="Reçu">
-            <tabRecu-component></tabRecu-component>
+            <tabRecu-component @envoyerData="save"></tabRecu-component>
         </tab>
         <tab title="Historique">
             <tabHistory-component></tabHistory-component>
@@ -10,15 +10,28 @@
 </template>
 
 <script>
-    import { Tabs, Tab } from 'vue-slim-tabs'
+    import {Tabs, Tab} from 'vue-slim-tabs'
 
     export default {
+        data(){
+            return{
+                permission:{},
+            }
+        },
         components: {
             Tabs, Tab
         },
-        props:{
+        props: {},
 
-        }
+        methods: {
+            save(variable) {
+                this.permission= variable;
+                this.$emit('renvoyer',this.permission);
+            }
+        },
+
+
+
     }
 </script>
 

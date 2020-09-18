@@ -2105,10 +2105,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
-      permission: {}
+      permission: ''
     };
   },
-  methods: {}
+  methods: {
+    save: function save(variable) {
+      this.permission = variable;
+    }
+  }
 });
 
 /***/ }),
@@ -2136,11 +2140,22 @@ __webpack_require__.r(__webpack_exports__);
 //
 
 /* harmony default export */ __webpack_exports__["default"] = ({
+  data: function data() {
+    return {
+      permission: {}
+    };
+  },
   components: {
     Tabs: vue_slim_tabs__WEBPACK_IMPORTED_MODULE_0__["Tabs"],
     Tab: vue_slim_tabs__WEBPACK_IMPORTED_MODULE_0__["Tab"]
   },
-  props: {}
+  props: {},
+  methods: {
+    save: function save(variable) {
+      this.permission = variable;
+      this.$emit('renvoyer', this.permission);
+    }
+  }
 });
 
 /***/ }),
@@ -2154,8 +2169,6 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _app__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../app */ "./resources/js/app.js");
-/* harmony import */ var _app__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_app__WEBPACK_IMPORTED_MODULE_0__);
 //
 //
 //
@@ -2168,16 +2181,18 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
       isVisible: true
     };
   },
-  props: ['permission'],
-  methods: {}
+  props: ['recu'],
+  methods: {},
+  updated: function updated() {
+    console.log('enfant a ete maj');
+    this.isVisible = true;
+  }
 });
 
 /***/ }),
@@ -2259,7 +2274,6 @@ __webpack_require__.r(__webpack_exports__);
   methods: {
     envoyer: function envoyer(permission) {
       this.$emit('envoyerData', permission);
-      console.log("j'envoie");
     }
   }
 });
@@ -38926,14 +38940,19 @@ var render = function() {
       _c("div", { staticClass: "navigation" }, [
         _c("div", { staticClass: "nav_onglet" }),
         _vm._v(" "),
-        _c("div", { staticClass: "nav_content" }, [_c("tab-component")], 1)
+        _c(
+          "div",
+          { staticClass: "nav_content" },
+          [_c("tab-component", { on: { renvoyer: _vm.save } })],
+          1
+        )
       ]),
       _vm._v(" "),
       _c("div", { staticClass: "content" }, [
         _c(
           "div",
           { staticClass: "content_item" },
-          [_c("tabcontent-component")],
+          [_c("tabcontent-component", { attrs: { recu: _vm.permission } })],
           1
         ),
         _vm._v(" "),
@@ -38993,7 +39012,12 @@ var render = function() {
   return _c(
     "tabs",
     [
-      _c("tab", { attrs: { title: "Reçu" } }, [_c("tabRecu-component")], 1),
+      _c(
+        "tab",
+        { attrs: { title: "Reçu" } },
+        [_c("tabRecu-component", { on: { envoyerData: _vm.save } })],
+        1
+      ),
       _vm._v(" "),
       _c(
         "tab",
@@ -39028,27 +39052,30 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("div", [
-    _vm.isVisible ? _c("div", { staticClass: "card" }, [_vm._m(0)]) : _vm._e()
+    _vm.isVisible
+      ? _c("div", { staticClass: "card" }, [
+          _c("div", { staticClass: "card-body" }, [
+            _c("h5", { staticClass: "card-title" }, [
+              _vm._v(_vm._s(_vm.recu.name) + " " + _vm._s(_vm.recu.prenom))
+            ]),
+            _vm._v(" "),
+            _c("p", { staticClass: "card-text" }, [
+              _vm._v(_vm._s(_vm.recu.motif))
+            ]),
+            _vm._v(" "),
+            _c("p", [
+              _vm._v(
+                _vm._s(_vm.recu.crennaux) +
+                  " | " +
+                  _vm._s(_vm.recu.date_de_pernission)
+              )
+            ])
+          ])
+        ])
+      : _vm._e()
   ])
 }
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "card-body" }, [
-      _c("h5", { staticClass: "card-title" }, [_vm._v("Nom du prof")]),
-      _vm._v(" "),
-      _c("p", { staticClass: "card-text" }, [
-        _vm._v(
-          "Some quick example text to build on the card title and make up the bulk of the\n                card's content."
-        )
-      ]),
-      _vm._v(" "),
-      _c("p", [_vm._v("crennaux | Date de permission")])
-    ])
-  }
-]
+var staticRenderFns = []
 render._withStripped = true
 
 

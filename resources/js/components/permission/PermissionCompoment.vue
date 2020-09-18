@@ -5,13 +5,13 @@
                 <div class="nav_onglet">
                 </div>
                 <div class="nav_content">
-                    <tab-component></tab-component>
+                    <tab-component @renvoyer="save"></tab-component>
                 </div>
             </div>
 
             <div class="content">
                 <div class="content_item">
-                    <tabcontent-component></tabcontent-component>
+                    <tabcontent-component v-bind:recu="permission"></tabcontent-component>
                 </div>
                 <div class="content_footer">
                     <h4>traitement de la permission</h4>
@@ -33,11 +33,14 @@
     export default {
         data() {
             return {
-                permission: {}
+                permission: '',
+
             }
         },
         methods: {
-
+            save(variable) {
+                this.permission = variable;
+            }
         }
     }
 </script>

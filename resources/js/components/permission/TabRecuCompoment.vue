@@ -19,12 +19,11 @@
         created() {
             axios.get('http://127.0.0.1:8000/permissions/json')
                 .then(Response => this.permissions = Response.data)
-                .catch(Error => console.log(Error))
+                .catch(Error => console.log(Error));
         },
         methods:{
             envoyer:function (permission) {
                 this.$emit('envoyerData',permission);
-                console.log("j'envoie")
             }
         }
     }
