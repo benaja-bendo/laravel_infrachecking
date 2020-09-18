@@ -68,7 +68,7 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
-        $image = "https://ui-avatars.com/api/?name={$data['name']}+{$data['prenom']}&size=128";
+        $image = "https://ui-avatars.com/api/?name={$data['name']}+{$data['prenom']}&size=200";
         return User::create([
             'name' => $data['name'],
             'prenom' => $data['prenom'],

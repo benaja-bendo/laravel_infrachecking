@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateTbChecksTable extends Migration
+class CreatePresencescoursTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,11 @@ class CreateTbChecksTable extends Migration
      */
     public function up()
     {
-        Schema::create('tb_checks', function (Blueprint $table) {
+        Schema::create('tb_presence_cours', function (Blueprint $table) {
             $table->id();
-            $table->integer('user_id');
-            $table->integer('motifCkeck_id');
-            $table->timestamp('check');
+            $table->date('debut_cours');
+            $table->date('fin_cours');
+            $table->foreignId("user_id")->constrained()->onDelete('cascade');
             $table->timestamps();
         });
     }
@@ -29,6 +29,6 @@ class CreateTbChecksTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('tb_checks');
+        Schema::dropIfExists('tb_presence_cous');
     }
 }

@@ -4,7 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class tb_motifCheck extends Model
+class tb_nuser extends Model
 {
     //
 }

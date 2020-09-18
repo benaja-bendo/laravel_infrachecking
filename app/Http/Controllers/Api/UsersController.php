@@ -5,7 +5,6 @@ namespace App\Http\Controllers\Api;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
-use Illuminate\Support\Facades\Hash;
 
 class UsersController extends Controller
 {
@@ -66,24 +65,34 @@ class UsersController extends Controller
     public function login(Request $request)
     {
         $validator=$request->validate([
-            "login"=>"required|email",
+            "login"=>"required",
             "password"=>"required"
         ]);
 
-        $password=Hash::make($validator['password']);
-        $users = DB::table('users')
-            ->where([
-                ['email', '=', $validator['login']],
-                ['password', '<>', $password],
-            ])
-            ->orWhere([
-                ['tel', '=', $validator['login']],
-                ['password', '=', $password],
-            ])
-            ->get();
+        $users=null;
+
+        $isAuth=auth()->attempt([
+           'email'=>$validator['login'],
+           'password'=>$validator['password'],
+        ]);
+
+        if ($isAuth){
+            $users = DB::table('users')
+                ->where([
+                    ['email', '=', $validator['login']],
+                ])
+                ->get();
+        }
 
         return response()->json([
-           "user"=>$users
+            "isValide"=>$isAuth,
+            "status"=>$isAuth?200:400,
+            "user"=>$users
         ]);
+    }
+
+    public function checkArriver(Request $request)
+    {
+
     }
 }
