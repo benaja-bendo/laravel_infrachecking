@@ -25,6 +25,7 @@
 
         methods: {
             save(variable) {
+                console.log(variable);
                 this.permission= variable;
                 this.$emit('renvoyer',this.permission);
             }

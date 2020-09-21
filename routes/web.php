@@ -30,6 +30,7 @@ Route::get('/presences','PresencesController@index')->name('presences.index');
 Route::get('/presences/json/{id?}','PresencesController@all');
 
 Route::get('/permissions','PermissionsController@index')->name('permissions.index');
+Route::patch('/permissions/{id}/{message}/{reponse}','PermissionsController@submit');
 Route::get('/permissions/json/{id?}','PermissionsController@all');
 Route::get('/permissions/jsonH/{id?}','PermissionsController@allH');
 

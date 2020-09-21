@@ -2089,19 +2089,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -2152,6 +2139,7 @@ __webpack_require__.r(__webpack_exports__);
   props: {},
   methods: {
     save: function save(variable) {
+      console.log(variable);
       this.permission = variable;
       this.$emit('renvoyer', this.permission);
     }
@@ -2181,14 +2169,55 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
-      isVisible: true
+      isVisible: true,
+      permission_id: '',
+      message: '',
+      reponse: ''
     };
   },
   props: ['recu'],
-  methods: {},
+  methods: {
+    accepter: function accepter() {
+      this.permission_id = this.recu.id;
+      this.message = document.querySelector('#message').value;
+      this.reponse = 'oui';
+      axios.patch('http://127.0.0.1:8000/permissions/' + this.permission_id + '/' + this.message + '/' + this.reponse, {
+        permission_id: this.permission_id,
+        message: this.message,
+        reponse: this.reponse
+      }).then(function (response) {
+        return console.log(response);
+      })["catch"](function (error) {
+        return console.log(error);
+      });
+      document.querySelector('#message').value = '';
+    },
+    refuser: function refuser() {// let message = document.querySelector('#message');
+      // let reponse = 'non';
+      // axios.post('http://127.0.0.1:8000/permissions/json')
+      //     .then(Response => this.permissions = Response.data)
+      //     .catch(Error => console.log(Error));
+      // console.log(message.value,reponse)
+    }
+  },
   updated: function updated() {
     console.log('enfant a ete maj');
     this.isVisible = true;
@@ -38937,57 +38966,31 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c("div", { staticClass: "container" }, [
     _c("div", { staticClass: "permission" }, [
-      _c("div", { staticClass: "navigation" }, [
-        _c("div", { staticClass: "nav_onglet" }),
-        _vm._v(" "),
-        _c(
-          "div",
-          { staticClass: "nav_content" },
-          [_c("tab-component", { on: { renvoyer: _vm.save } })],
-          1
-        )
-      ]),
+      _c(
+        "div",
+        { staticClass: "navigation", staticStyle: { height: "500px" } },
+        [
+          _c("div", { staticClass: "nav_onglet" }),
+          _vm._v(" "),
+          _c(
+            "div",
+            { staticClass: "nav_content" },
+            [_c("tab-component", { on: { renvoyer: _vm.save } })],
+            1
+          )
+        ]
+      ),
       _vm._v(" "),
-      _c("div", { staticClass: "content" }, [
-        _c(
-          "div",
-          { staticClass: "content_item" },
-          [_c("tabcontent-component", { attrs: { recu: _vm.permission } })],
-          1
-        ),
-        _vm._v(" "),
-        _vm._m(0)
-      ])
+      _c(
+        "div",
+        { staticClass: "content" },
+        [_c("tabcontent-component", { attrs: { recu: _vm.permission } })],
+        1
+      )
     ])
   ])
 }
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "content_footer" }, [
-      _c("h4", [_vm._v("traitement de la permission")]),
-      _vm._v(" "),
-      _c("div", { staticClass: "form-group" }, [
-        _c("label", { attrs: { for: "message" } }, [
-          _vm._v("Méssage(facultatif)")
-        ]),
-        _vm._v(" "),
-        _c("textarea", {
-          staticClass: "form-control",
-          attrs: { id: "message" }
-        })
-      ]),
-      _vm._v(" "),
-      _c("div", [
-        _c("button", { staticClass: "btn btn-primary" }, [_vm._v("accepter")]),
-        _vm._v(" "),
-        _c("button", { staticClass: "btn btn-danger" }, [_vm._v("refuser")])
-      ])
-    ])
-  }
-]
+var staticRenderFns = []
 render._withStripped = true
 
 
@@ -39052,30 +39055,83 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("div", [
-    _vm.isVisible
-      ? _c("div", { staticClass: "card" }, [
-          _c("div", { staticClass: "card-body" }, [
-            _c("h5", { staticClass: "card-title" }, [
-              _vm._v(_vm._s(_vm.recu.name) + " " + _vm._s(_vm.recu.prenom))
-            ]),
-            _vm._v(" "),
-            _c("p", { staticClass: "card-text" }, [
-              _vm._v(_vm._s(_vm.recu.motif))
-            ]),
-            _vm._v(" "),
-            _c("p", [
-              _vm._v(
-                _vm._s(_vm.recu.crennaux) +
-                  " | " +
-                  _vm._s(_vm.recu.date_de_pernission)
-              )
+    _c("div", { staticClass: "content_item" }, [
+      _vm.isVisible
+        ? _c("div", { staticClass: "card" }, [
+            _c("div", { staticClass: "card-body" }, [
+              _c("h5", { staticClass: "card-title" }, [
+                _vm._v(_vm._s(_vm.recu.name) + " " + _vm._s(_vm.recu.prenom))
+              ]),
+              _vm._v(" "),
+              _c("p", { staticClass: "card-text" }, [
+                _vm._v(_vm._s(_vm.recu.motif))
+              ]),
+              _vm._v(" "),
+              _c("p", [
+                _vm._v(
+                  _vm._s(_vm.recu.crennaux) +
+                    " | " +
+                    _vm._s(_vm.recu.date_de_pernission)
+                )
+              ])
             ])
           ])
+        : _vm._e()
+    ]),
+    _vm._v(" "),
+    _c("div", { staticClass: "content_footer" }, [
+      _c("form", [
+        _c("h4", [_vm._v("traitement de la permission")]),
+        _vm._v(" "),
+        _vm._m(0),
+        _vm._v(" "),
+        _c("div", [
+          _c(
+            "button",
+            {
+              staticClass: "btn btn-primary",
+              on: {
+                click: function($event) {
+                  $event.preventDefault()
+                  return _vm.accepter($event)
+                }
+              }
+            },
+            [_vm._v("accepter")]
+          ),
+          _vm._v(" "),
+          _c(
+            "button",
+            {
+              staticClass: "btn btn-danger",
+              on: {
+                click: function($event) {
+                  $event.preventDefault()
+                  return _vm.refuser($event)
+                }
+              }
+            },
+            [_vm._v("refuser")]
+          )
         ])
-      : _vm._e()
+      ])
+    ])
   ])
 }
-var staticRenderFns = []
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "form-group" }, [
+      _c("label", { attrs: { for: "message" } }, [
+        _vm._v("Méssage(facultatif)")
+      ]),
+      _vm._v(" "),
+      _c("textarea", { staticClass: "form-control", attrs: { id: "message" } })
+    ])
+  }
+]
 render._withStripped = true
 
 

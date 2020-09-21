@@ -37,4 +37,11 @@ class PermissionsController extends Controller
             ->get();
         return Response()->json($permissions);
     }
+
+    public function submit(Request $request){
+        $permission = DB::table('tb_permissions')
+            ->where("tb_permissions.id",$request['permission_id'])
+            ->update(['tb_permissions.reponse_de_permission'=>$request['reponse'],'tb_permissions.commentaire'=>$request['message']]);
+        return $permission;
+    }
 }
