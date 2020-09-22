@@ -21,6 +21,10 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
+Route::get('/register-nUser',function (){
+    return view('Gestion_users.registre_nuser');
+})->name('nUser');
+
 Route::get('/users','UsersController@index')->name('users.all');
 Route::get('/users/json/{q?}','UsersController@allUser_json');
 Route::get('/users/pdf','UsersController@createPDF');
