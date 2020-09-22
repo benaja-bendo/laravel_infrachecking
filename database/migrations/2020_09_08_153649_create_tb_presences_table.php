@@ -13,7 +13,7 @@ class CreateTbPresencesTable extends Migration
      */
     public function up()
     {
-        Schema::create('tb_presences', function (Blueprint $table) {
+        Schema::create('presences', function (Blueprint $table) {
             $table->id();
             $table->date('heure_arrive');
             $table->date('heure_depart');
@@ -31,6 +31,6 @@ class CreateTbPresencesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('tb_presences');
+        Schema::dropIfExists('presences');
     }
 }

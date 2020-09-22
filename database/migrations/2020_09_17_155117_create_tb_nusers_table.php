@@ -13,7 +13,7 @@ class CreateTbNusersTable extends Migration
      */
     public function up()
     {
-        Schema::create('tb_nusers', function (Blueprint $table) {
+        Schema::create('nusers', function (Blueprint $table) {
             $table->id();
             $table->string('name');
             $table->string('prenom');
@@ -27,6 +27,7 @@ class CreateTbNusersTable extends Migration
             $table->string('immei')->nullable();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
+            $table->foreignId("entite_id")->constrained();
             $table->rememberToken();
             $table->timestamps();
         });
@@ -39,6 +40,6 @@ class CreateTbNusersTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('tb_nusers');
+        Schema::dropIfExists('nusers');
     }
 }

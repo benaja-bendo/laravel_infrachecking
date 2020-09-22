@@ -13,7 +13,7 @@ class CreateTbEntitesTable extends Migration
      */
     public function up()
     {
-        Schema::create('tb_entites', function (Blueprint $table) {
+        Schema::create('entites', function (Blueprint $table) {
             $table->id();
             $table->string("nom_entite",255);
             $table->string("image",255)->nullable();
@@ -29,6 +29,6 @@ class CreateTbEntitesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('tb_entites');
+        Schema::dropIfExists('entites');
     }
 }

@@ -13,11 +13,11 @@ class CreatePresencescoursTable extends Migration
      */
     public function up()
     {
-        Schema::create('tb_presence_cours', function (Blueprint $table) {
+        Schema::create('presence_cours', function (Blueprint $table) {
             $table->id();
             $table->date('debut_cours');
             $table->date('fin_cours');
-            $table->foreignId("user_id")->constrained()->onDelete('cascade');
+            $table->foreignId("user_id")->constrained()->cascadeOnDelete();
             $table->timestamps();
         });
     }
@@ -29,6 +29,6 @@ class CreatePresencescoursTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('tb_presence_cous');
+        Schema::dropIfExists('presence_cours');
     }
 }
