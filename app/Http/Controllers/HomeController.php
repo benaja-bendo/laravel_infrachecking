@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Entite;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class HomeController extends Controller
 {
@@ -23,6 +25,7 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        $entites = DB::table('entites')->select('nom_entite', 'image')->get();
+        return view('home',["entites"=>$entites]);
     }
 }

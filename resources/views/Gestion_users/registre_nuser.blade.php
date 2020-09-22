@@ -2,39 +2,44 @@
 
 @section('content')
     <div class="container">
-        <form action="" enctype="multipart/form-data">
+        <form action="" enctype="multipart/form-data" method="post">
             @csrf
             <div class="form-group">
                 <label for="nom">nom</label>
-                <input id="nom" class="form-control" type="text">
+                <input name="name" id="nom" class="form-control" type="text">
             </div>
             <div class="form-group">
                 <label for="prenom">prenom</label>
-                <input id="prenom" class="form-control" type="text">
+                <input name="prenom"  id="prenom" class="form-control" type="text">
             </div>
             <div class="form-group">
                 <label for="email">email</label>
-                <input id="email" class="form-control" type="text">
+                <input name="email"  id="email" class="form-control" type="text">
             </div>
-            <div class="form-group">
+            {{--<div class="form-group">
                 <label for="image">image</label>
-                <input id="image" class="form-control" type="file">
-            </div>
+                <input name="image"  id="image" class="form-control" type="file">
+            </div>--}}
             <div class="form-group">
                 <label for="tel">tel</label>
-                <input id="tel" class="form-control" type="text">
+                <input name="tel"  id="tel" class="form-control" type="text">
             </div>
             <div class="form-group">
                 <label for="adresse">adresse</label>
-                <input id="adresse" class="form-control" type="text">
+                <input name="adresse"  id="adresse" class="form-control" type="text">
             </div>
             <div class="form-group">
                 <label for="cours">cours</label>
-                <input id="courss" class="form-control" type="text">
+                <input name="cours"  id="cours" class="form-control" type="text">
             </div>
             <div class="form-group">
-                <label for="fonctions">fonctions (formateur ou prestataire)</label>
-                <input id="fonctions" class="form-control" type="text">
+                <label for="fonction">fonctions (formateur ou prestataire)</label>
+                <input name="fonction"  id="fonction" class="form-control" type="text">
+            </div>
+
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input name="password"  id="password" class="form-control" type="password">
             </div>
             <div class="form-group">
                 <button class="btn btn-primary" type="submit">enregistrer</button>

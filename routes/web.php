@@ -1,6 +1,10 @@
 <?php
 
+use App\Entite;
+use App\Nuser;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Route;
+use Illuminate\Http\Request;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,16 +18,38 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    $countUser=\App\User::all()->count();
+    return view('welcome',['count'=>$countUser]);
 });
+
+Route::get('/admin', function () {
+    return view('admin.index');
+});
+
+Route::resource('/entite','EntiteController');
 
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::get('/register-nUser',function (){
+Route::get('/login-entite',function (){
+   return view('login-entite');
+});
+
+Route::get('/register-nUser',function (Request $request){
     return view('Gestion_users.registre_nuser');
 })->name('nUser');
+
+Route::post('/register-nUser',function (Request $request){
+
+    $input = $request->all();
+    $input['entite_id'] = 1;
+    $input['image'] = "https://ui-avatars.com/api/?background=470000&color=fff&size=200&name=styveLioumba&font-size=0.50";
+
+    $user = Nuser::create($input);
+    return view('Gestion_users.registre_nuser');
+})->name('nUser');
+
 
 Route::get('/users','UsersController@index')->name('users.all');
 Route::get('/users/json/{q?}','UsersController@allUser_json');
