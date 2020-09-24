@@ -26,36 +26,9 @@ class UsersController extends Controller
         ]);
     }
 
-    public  function  allUser_json()
-    {
-        if(request('q') !== null){
-            $utilisateurs['data'] = User::where('name','like', '%'.request('q').'%')->get();
-//            $utilisateurs['data'] = DB::table('users')->where('name','like', '%'.'bendo'.'%')->get();
-             return Response()->json($utilisateurs['data']);
-        }
-        else{
-            $utilisateurs = User::all();
-            return Response()->json($utilisateurs);
-        }
-    }
 
-    // Generate PDF
-    public function createPDF()
-    {
-        // récupérer tous les enregistrements de la base de données
-        $utilisateurs = User::all();
 
-        // partager des données à afficher
-        view()->share('utilisateurs', $utilisateurs);
-        $pdf = PDF::loadView('pdf_view', $utilisateurs);
 
-        // télécharger le fichier PDF avec la méthode de téléchargement
-        return $pdf->download('pdf_file.pdf');
 
-    }
 
-    public function export()
-    {
-        return Excel::download(new UsersExport, 'users.xlsx');
-    }
 }

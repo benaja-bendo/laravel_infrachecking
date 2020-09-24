@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Entite;
+use App\Nuser;
 use Illuminate\Http\Request;
 
 class EntiteController extends Controller
@@ -14,7 +15,7 @@ class EntiteController extends Controller
      */
     public function index()
     {
-        //
+        return view('login-entite');
     }
 
     /**
@@ -86,5 +87,25 @@ class EntiteController extends Controller
     public function destroy($id)
     {
         //
+    }
+
+    public function login(Request $request)
+    {
+        $input = $request->all();
+        $entite=Entite::where(
+            [
+                "nom_entite"=>$input['email'],
+                "password"=>$input['password']
+            ]
+        )->get();
+
+        count($entite)>0? $isAuth=true: $isAuth=false;
+
+        return $isAuth?redirect("/nusers"):back();
+       /* return response()->json([
+            "isValide"=>$isAuth,
+            "status"=>$isAuth?200:400,
+            "user"=>$entite
+        ]);*/
     }
 }

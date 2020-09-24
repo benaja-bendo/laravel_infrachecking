@@ -25,7 +25,7 @@
         @else
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
-                <a class="navbar-brand" href="{{ url('/home') }}">
+                <a class="navbar-brand" href="#">
                     infraChecking
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
@@ -36,7 +36,7 @@
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav mr-auto">
                         <li>
-                            <a href="{{ route('users.all') }}" class="nav-link">Utilisateurs</a>
+                            <a href="{{ route('nusers.index') }}" class="nav-link">Utilisateurs</a>
                         </li>
                         <li>
                             <a href="{{ route('permissions.index') }}" class="nav-link">permissions</a>

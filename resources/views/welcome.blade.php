@@ -70,7 +70,7 @@
             @auth
                 <a href="#">Pannel</a>
             @else
-                <a href="{{ url('/login-entite') }}">Se connecter</a>
+                <a href="{{ route('entite.index') }}">Se connecter</a>
 
                 @if($count<0)
                     @if (Route::has('register'))

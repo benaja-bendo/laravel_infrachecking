@@ -7,6 +7,5 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 
 class Nuser extends Authenticatable
 {
-//    protected $fillable=[];
     protected $guarded=['_token'];
 }

@@ -27,14 +27,11 @@ Route::get('/admin', function () {
 });
 
 Route::resource('/entite','EntiteController');
+Route::post('/entite','EntiteController@login')->name('loginEntite');
 
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
-
-Route::get('/login-entite',function (){
-   return view('login-entite');
-});
 
 Route::get('/register-nUser',function (Request $request){
     return view('Gestion_users.registre_nuser');
@@ -50,11 +47,11 @@ Route::post('/register-nUser',function (Request $request){
     return view('Gestion_users.registre_nuser');
 })->name('nUser');
 
-
-Route::get('/users','UsersController@index')->name('users.all');
-Route::get('/users/json/{q?}','UsersController@allUser_json');
-Route::get('/users/pdf','UsersController@createPDF');
-Route::get('/users/export/', 'UsersController@export');
+Route::resource('/nusers','NuserController');
+//Route::get('/users','UsersController@index')->name('users.all');
+Route::get('/users/json/{q?}','NuserController@allUser_json');
+Route::get('/users/pdf','NuserController@createPDF');
+Route::get('/users/export/', 'NuserController@export');
 
 Route::get('/presences','PresencesController@index')->name('presences.index');
 Route::get('/presences/json/{id?}','PresencesController@all');
